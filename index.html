@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<script type="text/javascript">var switchTo5x=true;</script>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<title>ODTU - Washigton DC Grubu</title>
+<style>
+
+html{
+	height: 100%;
+}
+body {
+	min-height: 100%;
+}
+
+body{
+	font-family: 'PT Sans Narrow', Calibri, 'Myriad Pro', Tahoma, Arial; 
+	color:#888;
+	padding:0;
+	margin:0;
+}
+
+.social{
+	height:70px;
+	width:100%;
+}
+
+.background_img{
+	position:absolute;
+	top: 0px;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	opacity:0;
+	z-index: -1;
+	transition: opacity 1000ms linear;
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+	background-position:center; 
+}
+.background_img[hey=true]{
+	opacity:1;
+	transition: opacity 1000ms linear;
+}
+
+#background_0{ background-image: url('odtuimg/0.jpg'); }
+#background_1{ background-image: url('odtuimg/1.jpg'); }
+#background_2{ background-image: url('odtuimg/2.jpg'); }
+#background_3{ background-image: url('odtuimg/3.jpg'); }
+#background_4{ background-image: url('odtuimg/4.jpg'); }
+#background_5{ background-image: url('odtuimg/5.jpg'); }
+
+.blabla{
+	width: 560px;
+	margin: 0px auto;
+	background-color: rgba(120, 120, 120, 0.7);
+	border-radius: 15px;
+	border: solid 0px rgb(183, 170, 136);
+	box-shadow: rgb(120, 120, 120) 0px 0px 20px 0px;
+	margin-top: 20px;
+	padding:5px;
+}
+
+
+.sound_source{
+	width: 560px;
+	margin: 0px auto;
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 15px;
+	border: solid 0px rgb(183, 170, 136);
+	box-shadow: rgb(255, 255, 255) 0px 0px 20px 0px;
+	margin-top: 20px;
+}
+.sound_source .title{
+	font-size: 20px;
+	font-variant: small-caps;
+	font-weight: bold;
+	letter-spacing: 0.2em;
+	color: black;
+	border-bottom: solid 2px black;
+}
+.sound_source .title span{
+	margin-left:20px;
+}
+.sound_source .content{
+	padding:10px;
+	color: black;
+}
+.sound_source .info{
+	margin: 5px 5px 5px 30px;
+	color: rgb(48, 48, 48);
+	font-size: 0.9em;
+}
+
+.sound_source a{
+	color: rgb(128, 121, 104);
+}
+
+/*Links*/
+a{ color:#36C;text-decoration:none;font-weight:normal;font-size:105%; }
+a:hover{text-decoration:underline;}
+
+/*Generic*/
+p {font-size:115%;}
+
+.listenlive{
+	font-size: 1.5em;
+	text-align:center;
+	line-height: 1.1em;
+	color:#444;
+	font-family: 'PT Sans Narrow', Calibri, 'Myriad Pro', Tahoma, Arial; 
+	margin:0;
+}
+
+.box {
+	width:570px;
+/*	background:#FFF;*/
+	margin:10px auto;
+	padding: 20px;
+}
+
+.main_title_below{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-shadow: 0 0 10px rgba(0,0,0,1);
+	color: white;
+}
+
+.main_title{
+	font-size: 2.0em;
+	font-weight: 900;
+	letter-spacing: 0.2em;
+	color: white;
+	text-shadow: 0 0 10px rgba(0,0,0,1);
+}
+
+</style>
+
+<script type="text/javascript">
+var bgImage=0;
+var bgMax = 5;
+
+function changeBgImage(){
+	bgImage++;
+	if(bgImage>bgMax) bgImage=0;
+	for(j=0;j<=bgMax; j++){
+		$("#background_"+j).attr("hey",(bgImage===j?"true":"false"));
+	}
+	setTimeout(changeBgImage,5000);
+}
+
+$(document).ready(function(){
+	setTimeout(changeBgImage,5000);
+});
+
+//]]>
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50259943-1', 'odtudc.org');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+<body>
+	<div id="background_0" class="background_img" hey="true"></div>
+	<div id="background_1" class="background_img"></div>
+	<div id="background_2" class="background_img"></div>
+	<div id="background_3" class="background_img"></div>
+	<div id="background_4" class="background_img"></div>
+	<div id="background_5" class="background_img"></div>
+	<div id="background_6" class="background_img"></div>
+	<div id="background_7" class="background_img"></div>
+	<div id="background_8" class="background_img"></div>
+	<div id="background_9" class="background_img"></div>
+	<div id="background_10" class="background_img"></div>
+
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+	<div class="box">
+		<div class="blabla">
+			<a href="http://www.metu.edu.tr" target="_blank"><img src="logo_odtu3.png" style="width: 550px; display:block;"></a>
+			<span class="main_title" style="padding-left: 20px;">Washington DC</span>
+			<span class="main_title_below"> ve civarindaki ODTU'lulerin bulusma noktasi</span>
+		</div>
+
+		<div class="sound_source" style="margin-top:5px;">
+			<div class="title"><span>Biz kimiz...</span></div>
+			<div class="content">
+			ODTUDC websitemize hosgeldiniz. Washington DC ve cevresindeki ODTU mezunlari ve ODTU'ye gonul vermis kisiler icin bir bulusma noktasi olmayi hedefliyoruz. Lutfen bize katilin! 
+			</div>
+		</div>
+
+		<div class="sound_source" style="margin-top:15px;">
+			<div class="title"><span>Sosyal platformlarimiz</span></div>
+
+			<div style="padding: 10px; float:left;">
+				<a href="https://www.facebook.com/groups/odtumddc" target="_blanl">
+					<img src="img/93-facebookgroup.jpg"></a></div>
+
+			<div class="fb-like-box" style="float:left" data-href="http://www.facebook.com/odtumddc" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false" data-width="300" data-height="60"></div>
+
+			<div style="clear:left; padding: 10px;">
+				<table border=0 style="padding: 5px;" cellspacing=0>
+				<tr><td align=right>
+				<a href="http://groups.google.com/group/odtumd_dc">Google grup email listemiz</a>'e katılmak icin e-mail adresinizi ekleyin.
+				</td></tr>
+				<form action="http://groups.google.com/group/odtumd_dc/boxsubscribe">
+				<input type=hidden name="hl" value="en">
+				<tr><td style="padding-left: 5px;">
+				Email: <input type=text name=email>
+				<input type=submit name="sub" value="Subscribe">
+				</td></tr>
+				</form>
+				</table>
+			</div>
+
+		</div>
+
+		<div class="sound_source" style="margin-top:5px;">
+			<div class="title"><span>Bağlantılar</span></div>
+			<div class="content">
+			<a href="http://www.odtumd.org.tr/" target="_blank">ODTU Mezunlar Dernegi</a></br>
+			<a href="http://www.radyoodtu.com.tr/" target="_blank">Radyo ODTU</a></br>
+			<a href="http://www.odtutv.odtu.edu.tr/" target="_blank">ODTU TV</a></br>
+			</div>
+		</div>
+
+	</div>
+	<!-- AddThis Smart Layers BEGIN -->
+	<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-534742f736ae906e"></script>
+	<script type="text/javascript">
+	  addthis.layers({
+	    'theme' : 'transparent',
+	    'share' : {
+	      'position' : 'left',
+	      'numPreferredServices' : 5
+	    }, 
+	    'follow' : {
+	      'services' : [
+	        {'service': 'facebook', 'id': 'odtumddc'}
+	      ]
+	    }   
+	  });
+	</script>
+	<!-- AddThis Smart Layers END --></body>
+</html>
