@@ -8,51 +8,38 @@
 <style>
 
 html{
-	height: 100%;
+  min-height: 100%;
+  background-image: url('odtuimg/0.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-transition: background-image 1s ease-in-out;
+  transition: background-image 1s ease-in-out;
 }
-body {
-	min-height: 100%;
+body{
+  min-height: 100%;
+  min-height: 100%;
+  font-family: 'PT Sans Narrow', Calibri, 'Myriad Pro', Tahoma, Arial; 
+  color:#888;
+  padding:0;
+  margin:0;
 }
 
-body{
-	font-family: 'PT Sans Narrow', Calibri, 'Myriad Pro', Tahoma, Arial; 
-	color:#888;
-	padding:0;
-	margin:0;
-}
+
+html.background_0{ background-image: url('odtuimg/0.jpg'); }
+html.background_1{ background-image: url('odtuimg/1.jpg'); }
+html.background_2{ background-image: url('odtuimg/2.jpg'); }
+html.background_3{ background-image: url('odtuimg/3.jpg'); }
+html.background_4{ background-image: url('odtuimg/4.jpg'); }
+html.background_5{ background-image: url('odtuimg/5.jpg'); }
+
 
 .social{
 	height:70px;
 	width:100%;
 }
 
-.background_img{
-	position:absolute;
-	top: 0px;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	width: 100%;
-	height: 100%;
-	opacity:0;
-	z-index: -1;
-	transition: opacity 1000ms linear;
-	background-repeat: no-repeat;
-	background-attachment:fixed;
-	background-position:center; 
-}
-.background_img[hey=true]{
-	opacity:1;
-	transition: opacity 1000ms linear;
-}
-
-#background_0{ background-image: url('odtuimg/0.jpg'); }
-#background_1{ background-image: url('odtuimg/1.jpg'); }
-#background_2{ background-image: url('odtuimg/2.jpg'); }
-#background_3{ background-image: url('odtuimg/3.jpg'); }
-#background_4{ background-image: url('odtuimg/4.jpg'); }
-#background_5{ background-image: url('odtuimg/5.jpg'); }
 
 .blabla{
 	width: 560px;
@@ -147,17 +134,14 @@ var bgMax = 5;
 function changeBgImage(){
 	bgImage++;
 	if(bgImage>bgMax) bgImage=0;
-	for(j=0;j<=bgMax; j++){
-		$("#background_"+j).attr("hey",(bgImage===j?"true":"false"));
-	}
+	$("html").attr("class","background_"+bgImage);
 	setTimeout(changeBgImage,5000);
-}
+};
 
 $(document).ready(function(){
 	setTimeout(changeBgImage,5000);
 });
 
-//]]>
 </script>
 
 <script>
@@ -173,17 +157,6 @@ $(document).ready(function(){
 
 </head>
 <body>
-	<div id="background_0" class="background_img" hey="true"></div>
-	<div id="background_1" class="background_img"></div>
-	<div id="background_2" class="background_img"></div>
-	<div id="background_3" class="background_img"></div>
-	<div id="background_4" class="background_img"></div>
-	<div id="background_5" class="background_img"></div>
-	<div id="background_6" class="background_img"></div>
-	<div id="background_7" class="background_img"></div>
-	<div id="background_8" class="background_img"></div>
-	<div id="background_9" class="background_img"></div>
-	<div id="background_10" class="background_img"></div>
 
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
@@ -198,13 +171,13 @@ $(document).ready(function(){
 		<div class="blabla">
 			<a href="http://www.metu.edu.tr" target="_blank"><img src="logo_odtu3.png" style="width: 550px; display:block;"></a>
 			<span class="main_title" style="padding-left: 20px;">Washington DC</span>
-			<span class="main_title_below"> ve civarindaki ODTU'lulerin bulusma noktasi</span>
+			<span class="main_title_below"> ve civarındaki ODTÜ'lülerin buluşma noktası</span>
 		</div>
 
 		<div class="sound_source" style="margin-top:5px;">
 			<div class="title"><span>Biz kimiz...</span></div>
 			<div class="content">
-			ODTUDC websitemize hosgeldiniz. Washington DC ve cevresindeki ODTU mezunlari ve ODTU'ye gonul vermis kisiler icin bir bulusma noktasi olmayi hedefliyoruz. Lutfen bize katilin! 
+			Hoşgediniz! Washington DC ve civarındaki ODTÜ mezunları ve ODTÜ'ye gönül vermiş kişiler icin bir buluşma noktası olmayı hedefliyoruz. Bize katılın!
 			</div>
 		</div>
 
@@ -218,20 +191,26 @@ $(document).ready(function(){
 			<div class="fb-like-box" style="float:left" data-href="http://www.facebook.com/odtumddc" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false" data-width="300" data-height="60"></div>
 
 			<div style="clear:left; padding: 10px;">
-				<table border=0 style="padding: 5px;" cellspacing=0>
-				<tr><td align=right>
-				<a href="http://groups.google.com/group/odtumd_dc">Google grup email listemiz</a>'e katılmak icin e-mail adresinizi ekleyin.
-				</td></tr>
 				<form action="http://groups.google.com/group/odtumd_dc/boxsubscribe">
+				<a href="http://groups.google.com/group/odtumd_dc">Email listemiz</a>e katılmak icin:
 				<input type=hidden name="hl" value="en">
-				<tr><td style="padding-left: 5px;">
-				Email: <input type=text name=email>
-				<input type=submit name="sub" value="Subscribe">
-				</td></tr>
+				<input type=text name=email>
+				<input type=submit name="sub" value="Gönder">
 				</form>
-				</table>
 			</div>
 
+		</div>
+
+		<div class="sound_source" style="margin-top:5px;">
+			<div class="title"><span>Etkinliklerimiz</span></div>
+			<div class="content">
+				<div style="margin: 0 auto; text-align:center">
+				<a href="https://www.vendini.com/ticket-software.html?t=tix&e=09f2e55f0fbf5f6fab258c03cc7db918" target="_blank">
+					<img src="events/2015_04_25_GencoErkal/banner.png" style="width:250px;"><br>
+					Biletler için tıklayın...<br>
+					</a>
+				</div>
+			</div>
 		</div>
 
 		<div class="sound_source" style="margin-top:5px;">
@@ -244,6 +223,12 @@ $(document).ready(function(){
 		</div>
 
 	</div>
+	<img src="odtuimg/0.jpg" height="1"/>
+	<img src="odtuimg/1.jpg" height="1"/>
+	<img src="odtuimg/2.jpg" height="1"/>
+	<img src="odtuimg/3.jpg" height="1"/>
+	<img src="odtuimg/4.jpg" height="1"/>
+
 	<!-- AddThis Smart Layers BEGIN -->
 	<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
 	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-534742f736ae906e"></script>
